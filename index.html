@@ -2,109 +2,258 @@
 <html lang="en">
 
 <head>
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="viewport"
+    content="width=device-width, initial-scale=1.0">
 
     <title>Fardin Portfolio</title>
 
-    <link rel="stylesheet" href="style.css">
+    <!-- GOOGLE FONT -->
+
+    <link rel="preconnect"
+    href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+
+    <!-- CSS -->
+
+    <link rel="stylesheet"
+    href="style.css">
+
 </head>
 
 <body>
 
+    <!-- HEADER -->
+
     <header>
+
         <h1>Fardin Nesar</h1>
 
         <p>
-            AWS Cloud  | Python Developer | Data Analytics |
-            Machine Learning Enthusiast
+            AWS Cloud | Python Developer |
+            Data Analytics | Machine Learning Enthusiast
         </p>
+
     </header>
+
+
+    <!-- ABOUT SECTION -->
 
     <section class="about">
 
         <h2>About Me</h2>
 
         <p>
-            Hello! I am Fardin Nesar, a passionate AWS Cloud and
-            Python learner with strong interest in Machine Learning,
-            Cloud Computing and Web Development.
+
+            Hello! I am Fardin Nesar, an aspiring AWS Cloud Engineer
+            with strong interest in Cloud Computing, Machine Learning,
+            Data Analytics, and Web Development.
 
             I enjoy building real-world cloud projects, deploying
             applications on AWS, and continuously improving my
             technical skills.
 
             Currently, I am focusing on AWS Cloud, Linux, Python,
-            Data Analytics, MySQL, Flask, and Machine Learning
+            MySQL, Flask, Machine Learning, and Data Analytics
             to build scalable and practical applications.
 
-            My goal is to become a Cloud Engineer and work on
-            modern cloud technologies and intelligent systems.
+            My goal is to become a professional Cloud Engineer
+            and work on modern cloud technologies and intelligent systems.
+
         </p>
 
     </section>
+
+
+    <!-- SKILLS SECTION -->
 
     <section class="skills">
 
         <h2>Skills</h2>
 
         <ul>
+
             <li>AWS Cloud</li>
+
             <li>Python</li>
+
             <li>Flask</li>
+
             <li>Machine Learning</li>
+
             <li>Data Analytics</li>
+
+            <li>MySQL</li>
+
             <li>Git & GitHub</li>
+
             <li>Linux Basics</li>
+
             <li>HTML & CSS</li>
-            <li>My SQL</li>
+
         </ul>
 
     </section>
+
+
+    <!-- PROJECT SECTION -->
 
     <section class="projects">
 
         <h2>Projects</h2>
 
         <div class="project-box">
+
             <h3>Student Marks Prediction App</h3>
 
             <p>
-                Machine Learning web application built using
-                Python and Flask to predict student marks.
+
+                Machine Learning web application developed
+                using Python and Flask to predict student marks.
+
             </p>
+
         </div>
 
+
         <div class="project-box">
+
             <h3>AWS Portfolio Website</h3>
 
             <p>
+
                 Personal portfolio website hosted on AWS S3
                 using static website hosting.
+
             </p>
+
         </div>
 
     </section>
 
+
+    <!-- CONTACT SECTION -->
+
     <section class="contact">
 
-        <h2>Contact</h2>
+        <h2>Contact Me</h2>
 
-        <p>
-            Email:
-             <a href="mailto:fardinmalick112@gmail.com">
-            fardinmalick112@gmail.com
-        </a>
-        </p>
+        <form>
 
-        <p>
-            GitHub:
-            <a href="https://github.com/FardinMallick"target="_blank">
-               github.com/FardinMallick
-        </a>
-        </p>
+            <input
+            type="text"
+            name="from_name"
+            placeholder="Enter Your Full Name"
+            required>
+
+            <input
+            type="email"
+            name="from_email"
+            placeholder="Enter Your Email"
+            required>
+
+            <textarea
+            name="message"
+            rows="6"
+            placeholder="Write Your Message"
+            required>
+            </textarea>
+
+            <button type="submit">
+
+                Send Message
+
+            </button>
+
+        </form>
+
+
+        <div class="contact-links">
+
+            <p>
+
+                Email:
+
+                <a href="mailto:fardinmalick112@gmail.com">
+
+                    fardinmalick112@gmail.com
+
+                </a>
+
+            </p>
+
+
+            <p>
+
+                GitHub:
+
+                <a href="https://github.com/FardinMallick"
+                target="_blank">
+
+                    github.com/FardinMallick
+
+                </a>
+
+            </p>
+
+        </div>
 
     </section>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <p>
+
+            © 2026 Fardin Nesar |
+            AWS Cloud Portfolio
+
+        </p>
+
+    </footer>
+
+
+    <!-- EMAIL JS -->
+
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+    <script>
+
+        emailjs.init("YOUR_PUBLIC_KEY");
+
+        document.querySelector("form")
+        .addEventListener("submit", function(event) {
+
+            event.preventDefault();
+
+            emailjs.sendForm(
+                "YOUR_SERVICE_ID",
+                "YOUR_TEMPLATE_ID",
+                this
+            )
+
+            .then(function() {
+
+                alert("Message Sent Successfully!");
+
+            }, function(error) {
+
+                alert("Failed to send message.");
+            });
+
+        });
+
+    </script>
 
 </body>
 
