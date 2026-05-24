@@ -393,8 +393,8 @@ form {
     margin-top: 25px;
 }
 
-input,
-textarea {
+form input,
+form textarea {
 
     width: 100%;
 
@@ -419,8 +419,8 @@ textarea {
     transition: 0.3s;
 }
 
-input:focus,
-textarea:focus {
+form input:focus,
+form textarea:focus {
 
     border-color: #38bdf8;
 
@@ -428,13 +428,18 @@ textarea:focus {
     0 0 15px rgba(56,189,248,0.2);
 }
 
-input::placeholder,
-textarea::placeholder {
+form input::placeholder,
+form textarea::placeholder {
 
     color: #cbd5e1;
 }
 
-button {
+form textarea {
+
+    resize: none;
+}
+
+form button {
 
     background:
     linear-gradient(
@@ -460,7 +465,7 @@ button {
     transition: 0.3s ease;
 }
 
-button:hover {
+form button:hover {
 
     transform: scale(1.02);
 

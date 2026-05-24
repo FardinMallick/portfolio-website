@@ -146,17 +146,17 @@
 
         <h2>Contact Me</h2>
 
-        <form>
+        <form id="contact-form">
 
             <input
             type="text"
-            name="from_name"
+            name="name"
             placeholder="Enter Your Full Name"
             required>
 
             <input
             type="email"
-            name="from_email"
+            name="email"
             placeholder="Enter Your Email"
             required>
 
@@ -164,8 +164,7 @@
             name="message"
             rows="6"
             placeholder="Write Your Message"
-            required>
-            </textarea>
+            required></textarea>
 
             <button type="submit">
 
@@ -229,26 +228,41 @@
 
     <script>
 
-        emailjs.init("YOUR_PUBLIC_KEY");
+        emailjs.init("98jX75Rqs-Ye70OOr");
 
-        document.querySelector("form")
+        document
+        .getElementById("contact-form")
+
         .addEventListener("submit", function(event) {
 
             event.preventDefault();
 
             emailjs.sendForm(
-                "YOUR_SERVICE_ID",
-                "YOUR_TEMPLATE_ID",
+
+                "Fardin_portfolio",
+
+                "template_hsed9mh",
+
                 this
+
             )
 
             .then(function() {
 
                 alert("Message Sent Successfully!");
 
-            }, function(error) {
+                document
+                .getElementById("contact-form")
+                .reset();
 
-                alert("Failed to send message.");
+            })
+
+            .catch(function(error) {
+
+                alert("Failed to Send Message");
+
+                console.log(error);
+
             });
 
         });
