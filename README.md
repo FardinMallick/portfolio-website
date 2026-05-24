@@ -41,11 +41,14 @@ AWS S3 Static Website Hosting Link
 ---
 
 ## Screenshots
-
-
-
+live website ( Hosted-from-s3.png)
+Endpoint (Bucket-website-endpoint.png)
+file (Bucket-uploaded-file.png)
+Json policy ( Bucket-policy-JSON.png)
+Bucket Name (Bucket-Name.png)
 ---
 
 ## Author
 
 Fardin Nesar
+-
